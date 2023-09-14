@@ -65,12 +65,13 @@ p.hand-written {
 }
 
 .github-img {
-    width: 100px;
+    width: 60px;
     transition: 0.2s;
 }
 
 .github-img:hover {
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.8);
+    -webkit-filter: drop-shadow(5px 5px 5px #666666);
+    filter: drop-shadow(5px 5px 5px #666666);
 }
 
 @media only screen and (max-width: 1200px) {
