@@ -3,9 +3,13 @@
     padding: 0;
 }
 
+html {
+    box-sizing: border-box;
+}
+
 .container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 30px auto;
 }
 
@@ -62,6 +66,11 @@ p.hand-written {
 .profile-img {
     max-height: 506px;
     width: auto;
+    transition: all 0.2s;
+}
+
+.profile-img:hover {
+    filter: contrast(1.75);
 }
 
 .github-img {
@@ -70,8 +79,8 @@ p.hand-written {
 }
 
 .github-img:hover {
-    -webkit-filter: drop-shadow(5px 5px 5px #666666);
-    filter: drop-shadow(5px 5px 5px #666666);
+    -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
 }
 
 @media only screen and (max-width: 1200px) {
