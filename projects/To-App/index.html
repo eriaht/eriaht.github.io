@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Just Do It</title>
+    <link
+      rel="shortcut icon"
+      href="./public/img/emotion-laugh-line.png"
+      type="image/x-icon"
+    />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css
+"
+      rel="stylesheet"
+    />
+    <link href="./public/style/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <audio id="app-audio" preload loop>
+      <source src="./public/music/ADMO - Coastal Drive.mp3" type="audio/mpeg" />
+      Your browser does not support this audio format.
+    </audio>
+
+    <div class="app-container" data-app="container">
+      <button class="audio-button" type="button">
+        <i class="ri-play-circle-fill"></i>
+      </button>
+      <h1 class="title">Keep Going</h1>
+      <form action="#" class="app-form">
+        <input type="text" placeholder="Add a new to do" class="to-do-input" />
+        <button type="submit" class="to-do-button">Add</button>
+      </form>
+      <div class="to-do-container"></div>
+      <button class="clear">Clear all</button>
+    </div>
+    <script src="./public/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+      rgba(230, 100, 100, 0.35),
+      rgba(145, 152, 229, 0.35)
+    ),
+    url("../img/bg.gif");
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.4rem;
+  height: 100vh;
+
+  /* Flex Box */
+  display: flex;
+  align-items: center;
+}
+
+.app-container {
+  margin: 0 auto;
+  width: 950px;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  clip-path: polygon(0 70%, 25px 0, 120% 0, 100% 90%, 90% 100%, 0 100%);
+
+  /* Flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Input */
+.app-form {
+  width: 95%;
+  margin-bottom: 15px;
+
+  /* Flexbox */
+  display: flex;
+  justify-content: center;
+}
+
+.to-do-input {
+  width: 50%;
+  height: 45px;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  margin-right: 15px;
+
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  transition: all 0.4s;
+}
+
+.to-do-input:focus {
+  outline: none;
+  width: 80%;
+}
+
+.to-do-button {
+  padding: 0 15px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: rgb(172, 125, 252);
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  transition: all 0.3s;
+}
+
+.to-do-button:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+button.clear {
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: rgb(250, 127, 82);
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  transition: all 0.3s;
+}
+
+.to-do-container {
+  border: 2px solid black;
+  height: 60vh;
+  width: 95%;
+  padding: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  /* Flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.to-do-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.to-do-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.to-do-item {
+  padding: 15px;
+  width: 98%;
+  border: 2px solid rgba(0, 0, 0, 0.477);
+  margin-bottom: 10px;
+  position: relative;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  /* overflow-x: hidden; */
+
+  /* Flexbox */
+  display: flex;
+  align-items: center;
+}
+
+.to-do-item__text {
+  margin-right: auto;
+  text-align: left;
+}
+
+.to-do-item i {
+  cursor: pointer;
+  margin-right: 25px;
+  font-size: 1.8rem;
+}
+
+.to-do-item__controls {
+  transform: translateX(100px);
+  transition: transform 0.4s;
+
+  /* Flex Box */
+  display: flex;
+  flex-direction: row;
+}
+
+.to-do-item:hover .to-do-item__controls {
+  transform: translateX(15px);
+}
+
+.to-do-item__controls i {
+  font-size: 1.6rem;
+  transition: transform 1s;
+}
+
+.to-do-item__controls:hover i {
+  transform: rotate(360deg);
+}
+
+.ri-checkbox-blank-circle-line {
+  color: rgba(0, 0, 0, 0.477);
+}
+
+.ri-checkbox-circle-fill {
+  color: #6db1ff;
+}
+
+.ri-delete-bin-2-fill {
+  color: rgb(249, 68, 68);
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* Audio Button */
+.audio-button {
+  background-color: transparent;
+  font-size: 3rem;
+  border: none;
+  text-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  position: absolute;
+  top: 15px;
+  left: 35px;
+}
+
+.ri-play-circle-fill {
+  color: black;
+}
+
+.ri-pause-circle-fill {
+  color: rgb(249, 68, 68);
+}
