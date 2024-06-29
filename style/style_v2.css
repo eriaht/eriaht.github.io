@@ -90,6 +90,18 @@ body {
   font-size: 20px;
 }
 
+.profile__items a {
+  text-decoration: none;
+}
+
+.profile__items a:hover .profile__item {
+  color: rgba(248, 108, 69, 0.655);
+}
+
+.profile__items a:visited {
+  color: black;
+}
+
 /* 
 //////// CUBE STYLES
 */
