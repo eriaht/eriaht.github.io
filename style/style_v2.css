@@ -1,0 +1,152 @@
+:root {
+  --cube-face: 50px;
+  --z-index: calc(var(--cube-face) / 2);
+}
+
+*,
+*:before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__photo-card {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 15px;
+}
+
+.cube-1 {
+  position: absolute;
+  top: 50%;
+  left: -75px;
+  z-index: 1000;
+}
+
+.cube-2 {
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.cube-3 {
+  position: absolute;
+  top: 50%;
+  right: -75px;
+  z-index: 1000;
+}
+
+.profile__photo {
+  height: 280px;
+  width: 280px;
+  background-image: url("../images/headshot.jpg");
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 70%, 25px 0, 120% 0, 100% 90%, 90% 100%, 0 100%);
+  align-self: center;
+  transition: all 0.4s;
+}
+
+.profile__photo:hover {
+  filter: invert(50%);
+}
+
+.profile__name {
+  font-size: 26px;
+  text-decoration: underline;
+}
+
+.profile__item {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.profile__items .profile__item {
+  font-size: 20px;
+}
+
+/* 
+//////// CUBE STYLES
+*/
+
+.scene {
+  width: var(--cube-face);
+  height: var(--cube-face);
+  perspective: 600px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-1 * var(--z-index)));
+  animation: rotate infinite 10s;
+  animation-timing-function: linear;
+}
+
+.cube__face {
+  position: absolute;
+  width: var(--cube-face);
+  height: var(--cube-face);
+  border: 1px solid black;
+}
+
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(var(--z-index));
+  background-color: rgba(248, 108, 69, 0.655);
+}
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(var(--z-index));
+  background-color: rgba(240, 248, 255, 0.655);
+}
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(var(--z-index));
+  background-color: rgba(240, 248, 255, 0.655);
+}
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(var(--z-index));
+  background-color: rgba(240, 248, 255, 0.655);
+}
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(var(--z-index));
+  background-color: rgba(240, 248, 255, 0.655);
+}
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(var(--z-index));
+  background-color: rgba(240, 248, 255, 0.655);
+}
+
+@keyframes rotate {
+  0% {
+  }
+  100% {
+    transform: translateZ(calc(-1 * var(--z-index))) rotateX(360deg)
+      rotateY(360deg);
+  }
+}
