@@ -69,7 +69,7 @@ body {
 .profile__photo {
   height: 280px;
   width: 280px;
-  background-image: url("../images/headshot.jpg");
+  background-image: url("../images/me.JPG");
   background-position: center;
   background-size: cover;
   clip-path: polygon(0 70%, 25px 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
