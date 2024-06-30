@@ -75,6 +75,11 @@ body {
   clip-path: polygon(0 70%, 25px 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
   align-self: center;
   animation: fade-in 4s forwards;
+  transition: all 1s;
+}
+
+.profile__photo:hover {
+  filter: invert(75%);
 }
 
 .profile__name {
