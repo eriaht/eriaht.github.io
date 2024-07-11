@@ -1,6 +1,9 @@
 :root {
   --cube-face: 50px;
   --z-index: calc(var(--cube-face) / 2);
+  --cube-tran-z: calc(-1 * var(--z-index));
+  --cube-rotate-x: 360deg;
+  --cube-rotate-y: 360deg;
 }
 
 *,
@@ -186,8 +189,8 @@ body {
   0% {
   }
   100% {
-    transform: translateZ(calc(-1 * var(--z-index))) rotateX(360deg)
-      rotateY(360deg);
+    transform: translateZ(var(--cube-tran-z)) rotateX(var(--cube-rotate-x))
+      rotateY(var(--cube-rotate-y));
   }
 }
 
