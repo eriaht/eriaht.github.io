@@ -32,7 +32,9 @@ body {
   width: 400px;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 80px;
+  border: 1px solid rgb(236, 236, 236);
+  padding: 15px;
 }
 
 .profile__photo-card {
@@ -40,6 +42,11 @@ body {
   align-self: center;
   justify-self: center;
   margin-bottom: 15px;
+}
+
+.profile__hr {
+  border: 1px solid rgb(236, 236, 236);
+  margin-top: 10px;
 }
 
 .cube-1 {
