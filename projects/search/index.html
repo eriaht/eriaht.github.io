@@ -25,6 +25,22 @@
             BigO(n).<br />So, if a list is 100 items long, then the <br />
             number of search operations is 100.
           </p>
+          <pre>
+              <code>
+const linearSearch = async () => {
+  for (let i = 0; i < numItems; i++) {
+    linearItems[i].classList.add("selected");
+    if (+linearItems[i].innerText === item) {
+      linearItems[i].classList.add("found");
+      break;
+    }
+
+    await sleep(wait);
+    linearItems[i].classList.remove("selected");
+  }
+};
+              </code>
+            </pre>
         </div>
         <div class="description">
           <h2>Binary Search</h2>
@@ -36,6 +52,29 @@
             the <br />
             number of search operations is only 7.
           </p>
+
+          <pre>
+            <code>
+const binarySearch = async () => { 
+  let start = 0; 
+  let end = binaryItems.length - 1; 
+  while (start <= end) { 
+    let mid = Math.floor((start + end) / 2);
+    binaryItems[mid].classList.add("selected"); 
+    if (+binaryItems[mid].innerText === item) {
+      binaryItems[mid].classList.add("found"); 
+      break; 
+    } else if (+binaryItems[mid].innerText > item) { 
+      end = mid - 1; 
+    } else { 
+      start = mid + 1; 
+    }
+  } 
+  await sleep(wait);
+  binaryItems[mid].classList.remove("selected");
+};
+            </code>
+          </pre>
         </div>
       </div>
       <button class="start-btn">Run search</button>
