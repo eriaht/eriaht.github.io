@@ -1,6 +1,8 @@
 const numItems = 10;
 let item = 10;
 let wait = 1000;
+let linDone = false,
+  binDone = false;
 const startBtn = document.querySelector(".start-btn");
 const linearItemContainer = document.querySelector(
   ".item-container.linear-items"
@@ -49,6 +51,7 @@ const linearSearch = async () => {
     await sleep(wait);
     linearItems[i].classList.remove("selected");
   }
+  linDone = true;
 };
 
 const binarySearch = async () => {
@@ -79,15 +82,19 @@ const binarySearch = async () => {
     // binaryItems[start].classList.add("l-black");
     // binaryItems[end].classList.add("r-black");
   }
+  binDone = true;
 };
 
 const main = () => {
   createItems();
-  startBtn.addEventListener("click", () => {
+  startBtn.addEventListener("click", async () => {
+    startBtn.disabled = true;
     clearItems();
     createItems();
-    linearSearch();
     binarySearch();
+    linearSearch().then(() => {
+      if (linDone && binDone) startBtn.disabled = false;
+    });
   });
 };
 
