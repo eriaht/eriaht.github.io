@@ -69,6 +69,8 @@ const binarySearch = async () => {
 
     if (+binaryItems[mid].innerText === item) {
       binaryItems[mid].classList.add("found");
+      binaryItems[oldStart].classList.remove("l-red");
+      binaryItems[oldEnd].classList.remove("r-red");
       break;
     } else if (+binaryItems[mid].innerText > item) {
       end = mid - 1;
