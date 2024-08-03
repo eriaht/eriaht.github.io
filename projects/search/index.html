@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear vs Binary Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>(Linear Search vs. Binary Search) Visualizer</h1>
+      <div class="descriptions">
+        <div class="description">
+          <h2>Linear Search</h2>
+          <p>
+            Linear search will check every element in <br />a list until the
+            desired element is found.<br />The runtime of a linear search is
+            BigO(n).<br />So, if a list is 100 items long, then the <br />
+            number of search operations is 100.
+          </p>
+        </div>
+        <div class="description">
+          <h2>Binary Search</h2>
+          <p>
+            Binary search starts in the middle<br />and continues to half the
+            list until<br />the desired element is found.<br />The runtime of a
+            linear search is BigO(log<sub>2</sub>(n)).<br />So, if a list is 100
+            items long, then the <br />
+            number of search operations is only 7.
+          </p>
+        </div>
+      </div>
+      <button class="start-btn">Run search</button>
+      <h2>Linear</h2>
+      <div class="item-container linear-items"></div>
+      <h2>Binary</h2>
+      <div class="item-container binary-items"></div>
+    </div>
+  </body>
+</html>
