@@ -56,3 +56,19 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.l-red {
+  border-left: solid 5px red;
+}
+
+.r-red {
+  border-right: solid 5px red;
+}
+
+.l-black {
+  border-left: solid 1px black;
+}
+
+.r-black {
+  border-right: solid 1px black;
+}

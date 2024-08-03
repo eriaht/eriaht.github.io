@@ -38,6 +38,19 @@ const createItems = () => {
   binaryItems = document.querySelectorAll(".binary-item");
 };
 
+const linearSearch = async () => {
+  for (let i = 0; i < numItems; i++) {
+    linearItems[i].classList.add("selected");
+    if (+linearItems[i].innerText === item) {
+      linearItems[i].classList.add("found");
+      break;
+    }
+
+    await sleep(wait);
+    linearItems[i].classList.remove("selected");
+  }
+};
+
 const binarySearch = async () => {
   let start = 0;
   let end = binaryItems.length - 1;
@@ -45,6 +58,11 @@ const binarySearch = async () => {
   while (start <= end) {
     let mid = Math.floor((start + end) / 2);
     binaryItems[mid].classList.add("selected");
+
+    let oldStart = start,
+      oldEnd = end;
+    binaryItems[start].classList.add("l-red");
+    binaryItems[end].classList.add("r-red");
 
     if (+binaryItems[mid].innerText === item) {
       binaryItems[mid].classList.add("found");
@@ -56,19 +74,10 @@ const binarySearch = async () => {
     }
     await sleep(wait);
     binaryItems[mid].classList.remove("selected");
-  }
-};
-
-const linearSearch = async () => {
-  for (let i = 0; i < numItems; i++) {
-    linearItems[i].classList.add("selected");
-    if (+linearItems[i].innerText === item) {
-      linearItems[i].classList.add("found");
-      break;
-    }
-
-    await sleep(wait);
-    linearItems[i].classList.remove("selected");
+    binaryItems[oldStart].classList.remove("l-red");
+    binaryItems[oldEnd].classList.remove("r-red");
+    // binaryItems[start].classList.add("l-black");
+    // binaryItems[end].classList.add("r-black");
   }
 };
 
