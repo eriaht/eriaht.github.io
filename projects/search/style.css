@@ -43,6 +43,10 @@ h1 {
   flex: 1;
 }
 
+.description:last-child {
+  margin-left: 10px;
+}
+
 .start-btn {
   font-size: 25px;
   padding: 10px;
@@ -101,6 +105,10 @@ h1 {
   p {
     font-size: 0.8rem;
   } */
+
+  .description:last-child {
+    margin-left: 0;
+  }
 
   pre code {
     font-size: 0.8rem;
