@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task organizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <div class="app">
+            <!-- Navbar -->
+            <!-- Check page -->
+            <!-- Text compare / sha validation page -->
+        <nav class="nav light-box">
+            <div class="nav--item"><a href="./index.html">Checks</a></div>
+            <div class="nav--item"><a href="./textcompare.html">Text compare</a></div>
+        </nav>
+        <!-- Add form -->
+            <!-- Add check by URL and name -->
+        <!-- Search form -->
+        <div class="action-container light-box">
+            <form action="#" class="add-form">
+                <input type="text" placeholder="Check URL" id="check-url">
+                <input type="text" placeholder="Check name" id="check-name">
+                <button class="btn btn--add">add</button>
+            </form>
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Search check...">
+            </form>
+        </div>
+        <!-- Grid of checks -->
+            <!-- Check container will show name, status [grey (not started), green (started)], and remove button -->
+            <!-- When a check is expanded it will open in a modal with an iframe for it  -->
+        <div class="check-grid light-box">
+        </div>
+    </div>
+</body>
+</html>
